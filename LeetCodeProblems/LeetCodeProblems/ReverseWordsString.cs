@@ -8,11 +8,11 @@ namespace LeetCodeProblems
 {
     internal class ReverseWordsString
     {/// <summary>
-    /// Leetcode Qestion 557
+    /// Leetcode Qestions
     /// </summary>
-        public class Solution
-        {
-            public string ReverseWords(string s)
+    /// 
+        //Leetcode 557
+        public string ReverseWords(string s)
             {
                 StringBuilder result = new StringBuilder();
                 int start = 0;
@@ -38,7 +38,26 @@ namespace LeetCodeProblems
 
                 return result.ToString();
             }
-        }
+
+        //Leetcode 1450
+        public int BusyStudent(int[] startTime, int[] endTime, int queryTime)
+                {
+                    int n = startTime.Length;
+                    int numStudent = 0;
+
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (queryTime >= startTime[i] && queryTime <= endTime[i])
+                        {
+                            numStudent++;
+                        }
+                    }
+
+                    return numStudent;
+                }
+            
+
+        
 
     }
 }
