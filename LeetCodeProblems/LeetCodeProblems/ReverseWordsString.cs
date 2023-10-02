@@ -55,9 +55,49 @@ namespace LeetCodeProblems
 
                     return numStudent;
                 }
-            
 
-        
+        /// <summary>
+        /// Leetcode 2038
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public bool WinnerOfGame(string colors)
+        {
+            string substringAAA = "AAA";
+            int countAAA = CountSubstringOccurrences(colors, substringAAA);
+
+            string substringBBB = "BBB";
+            int countBBB = CountSubstringOccurrences(colors, substringBBB);
+
+            if (countAAA > countBBB)
+            {
+                return true;
+            }
+            else if (colors.Length < 4)
+            {
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int CountSubstringOccurrences(string input, string substring)
+        {
+            int count = 0;
+            int index = input.IndexOf(substring);
+
+            while (index != -1)
+            {
+                count++;
+                index = input.IndexOf(substring, index + 1);
+            }
+
+            return count;
+        }
+
+
 
     }
 }
