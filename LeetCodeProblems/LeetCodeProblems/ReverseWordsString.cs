@@ -97,7 +97,36 @@ namespace LeetCodeProblems
             return count;
         }
 
+        // Leetcode 1512
+        public int NumIdenticalPairs(int[] nums)
+        {
+            int pair = 0;
 
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] == nums[j])
+                    {
+                        pair++;
+                    }
+                }
+            }
+            return pair;
+        }
+
+        // Leetcode 1470
+        public int[] Shuffle(int[] nums, int n)
+        {
+            int[] arr = new int[nums.Length];
+            int j = 0;
+            for (int i = 0; i < n; i++)
+            {
+                arr[j++] = nums[i];
+                arr[j++] = nums[n + i];
+            }
+            return arr;
+        }
 
     }
 }
