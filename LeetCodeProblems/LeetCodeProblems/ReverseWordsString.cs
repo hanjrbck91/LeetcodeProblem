@@ -128,5 +128,82 @@ namespace LeetCodeProblems
             return arr;
         }
 
+        /// <summary>
+        /// Leetcode 1475
+        /// </summary>
+        /// <param name="prices"></param>
+        /// <returns></returns>
+           public int[] FinalPrices(int[] prices)
+            {
+                int[] discountPrice = new int[prices.Length];
+                Array.Copy(prices, discountPrice, prices.Length);
+
+                for (int i = 0; i < prices.Length - 1; i++)
+                {
+                    for (int j = i + 1; j < prices.Length; j++)
+                    {
+                        if (prices[i] >= prices[j])
+                        {
+                            discountPrice[i] = prices[i] - prices[j];
+                            break;
+                        }
+                    }
+                }
+
+                return discountPrice;
+            }
+      
+
+
+    }
+
+
+    /// <summary>
+    /// Leetcode 706
+    /// </summary>
+    public class MyHashMap
+    {
+        private const int Capacity = 1000001; // Maximum capacity based on constraints
+        private int[] keys;
+        private int[] values;
+
+        public MyHashMap()
+        {
+            keys = new int[Capacity];
+            values = new int[Capacity];
+            Array.Fill(keys, -1); // Initialize keys to -1 (indicating empty)
+        }
+
+        public void Put(int key, int value)
+        {
+            int index = Hash(key);
+            keys[index] = key;
+            values[index] = value;
+        }
+
+        public int Get(int key)
+        {
+            int index = Hash(key);
+            if (keys[index] == key)
+            {
+                return values[index];
+            }
+            return -1;
+        }
+
+        public void Remove(int key)
+        {
+            int index = Hash(key);
+            if (keys[index] == key)
+            {
+                keys[index] = -1; // Mark as empty
+            }
+        }
+
+        // Custom hash function to map keys to indices
+        private int Hash(int key)
+        {
+            return key % Capacity;
+        }
     }
 }
