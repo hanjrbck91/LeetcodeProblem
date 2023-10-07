@@ -179,6 +179,27 @@ namespace LeetCodeProblems
 
         }
 
+        /// <summary>
+        /// Leetcode 1507
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public string ReformatDate(string date)
+        {
+            string[] parts = date.Split(' ');
+            int day = int.Parse(parts[0].Substring(0, parts[0].Length - 2));
+            string month = GetMonth(parts[1]);
+            string year = parts[2];
+            return $"{year}-{month}-{day.ToString("D2")}";
+        }
+
+        private string GetMonth(string month)
+        {
+            string[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+            int index = Array.IndexOf(months, month) + 1;
+            return index.ToString("D2");
+        }
+
 
 
     }
