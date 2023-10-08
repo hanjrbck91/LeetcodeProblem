@@ -200,6 +200,46 @@ namespace LeetCodeProblems
             return index.ToString("D2");
         }
 
+        /// <summary>
+        /// Leetcode 1458
+        /// </summary>
+        /// <param name="nums1"></param>
+        /// <param name="nums2"></param>
+        /// <returns></returns>
+        public int MaxDotProduct(int[] nums1, int[] nums2)
+        {
+            int m = nums1.Length;
+            int n = nums2.Length;
+            int[,] dp = new int[m + 1, n + 1];
+
+            for (int i = 1; i <= m; i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    dp[i, j] = Math.Max(nums1[i - 1] * nums2[j - 1] + dp[i - 1, j - 1], dp[i - 1, j]);
+                    dp[i, j] = Math.Max(dp[i, j], dp[i, j - 1]);
+                    dp[i, j] = Math.Max(dp[i, j], nums1[i - 1] * nums2[j - 1]);
+                }
+            }
+
+            int result = dp[m, n];
+            if (result == 0)
+            {
+                // Handle the case when there are no non-empty subsequences with the same length
+                result = Int32.MinValue;
+                for (int i = 0; i < m; i++)
+                {
+                    result = Math.Max(result, nums1[i] * nums2[0]);
+                }
+                for (int j = 1; j < n; j++)
+                {
+                    result = Math.Max(result, nums1[0] * nums2[j]);
+                }
+            }
+
+            return result;
+        }
+
 
 
     }
