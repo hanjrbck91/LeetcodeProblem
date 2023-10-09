@@ -240,6 +240,28 @@ namespace LeetCodeProblems
             return result;
         }
 
+        /// <summary>
+        /// Leetcode 1523
+        /// </summary>
+        /// <param name="low"></param>
+        /// <param name="high"></param>
+        /// <returns></returns>
+        public int countOdds(int low, int high)
+        {
+            int count = 0;
+
+            for (int i = low; i <= high; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+
+        }
+
 
 
     }
