@@ -262,6 +262,31 @@ namespace LeetCodeProblems
 
         }
 
+        /// <summary>
+        /// Leetcode 1556
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public string ThousandSeparator(int n)
+        {
+            string s = n.ToString();
+
+            if (s.Length <= 3)
+            {
+                return s;
+            }
+
+            StringBuilder m = new StringBuilder(s);
+            int insertPosition = s.Length - 3;
+
+            while (insertPosition > 0)
+            {
+                m.Insert(insertPosition, '.');
+                insertPosition -= 3;
+            }
+
+            return m.ToString();
+        }
 
 
     }
