@@ -288,6 +288,50 @@ namespace LeetCodeProblems
             return m.ToString();
         }
 
+        /// <summary>
+        /// Leetcode 1592
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public string ReorderSpaces(string text)
+        {
+            int spaceCount = 0;
+            StringBuilder result = new StringBuilder();
+
+            // Count spaces
+            foreach (char c in text)
+            {
+                if (c == ' ')
+                {
+                    spaceCount++;
+                }
+            }
+
+            // Split words
+            string[] words = text.Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int wordCount = words.Length;
+
+            // Calculate spaces between words and extra spaces
+            int spacesBetweenWords = wordCount > 1 ? spaceCount / (wordCount - 1) : 0;
+            int extraSpaces = wordCount > 1 ? spaceCount % (wordCount - 1) : spaceCount;
+
+            // Reconstruct the string
+            foreach (string word in words)
+            {
+                result.Append(word);
+                if (wordCount > 1)
+                {
+                    result.Append(new string(' ', spacesBetweenWords));
+                    wordCount--;
+                }
+            }
+
+            // Append extra spaces at the end
+            result.Append(new string(' ', extraSpaces));
+
+            return result.ToString();
+        }
+
 
     }
 
