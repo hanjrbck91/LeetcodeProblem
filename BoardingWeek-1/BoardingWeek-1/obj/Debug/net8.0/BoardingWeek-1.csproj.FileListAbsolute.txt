@@ -1,0 +1,15 @@
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\bin\Debug\net8.0\BoardingWeek-1.exe
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\bin\Debug\net8.0\BoardingWeek-1.deps.json
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\bin\Debug\net8.0\BoardingWeek-1.runtimeconfig.json
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\bin\Debug\net8.0\BoardingWeek-1.dll
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\bin\Debug\net8.0\BoardingWeek-1.pdb
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.AssemblyInfoInputs.cache
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.AssemblyInfo.cs
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.csproj.CoreCompileInputs.cache
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.sourcelink.json
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.dll
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\refint\BoardingWeek-1.dll
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.pdb
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\BoardingWeek-1.genruntimeconfig.cache
+C:\Users\njr\Downloads\LeetCode\BoardingWeek-1\BoardingWeek-1\obj\Debug\net8.0\ref\BoardingWeek-1.dll
